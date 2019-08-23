@@ -1,0 +1,10 @@
+uuid: fac1e947-f4b0-44ce-840b-f8f1a7f2621b
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.responsive_image
+label: 'Responsive Image'
+targetEntityType: media
+cache: true

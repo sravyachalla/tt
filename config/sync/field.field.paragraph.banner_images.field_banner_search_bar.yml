@@ -1,0 +1,23 @@
+uuid: 4840020b-fc4e-40c2-b218-492fe9304719
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_banner_search_bar
+    - paragraphs.paragraphs_type.banner_images
+id: paragraph.banner_images.field_banner_search_bar
+field_name: field_banner_search_bar
+entity_type: paragraph
+bundle: banner_images
+label: 'Search Bar on banner'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

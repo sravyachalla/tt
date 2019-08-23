@@ -1,0 +1,153 @@
+{
+    "name": "drupal-composer/drupal-project",
+    "description": "Project template for Drupal 8 projects with composer",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "",
+            "role": ""
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+		{
+			"type": "package",
+			"package": {
+				"name": "ckeditor-plugin/colorbutton",
+				"version": "4.12.1",
+				"type": "drupal-library",
+				"dist": {
+					"url": "https://download.ckeditor.com/colorbutton/releases/colorbutton_4.12.1.zip",
+					"type": "zip"
+				}
+			}
+        },
+        {
+			"type": "package",
+			"package": {
+				"name": "ckeditor-plugin/panelbutton",
+				"version": "4.12.1",
+				"type": "drupal-library",
+				"dist": {
+					"url": "https://download.ckeditor.com/panelbutton/releases/panelbutton_4.12.1.zip",
+					"type": "zip"
+				}
+			}
+        },
+        {
+			"type": "package",
+			"package": {
+				"name": "ckeditor-plugin/font",
+				"version": "4.12.1",
+				"type": "drupal-library",
+				"dist": {
+					"url": "https://download.ckeditor.com/font/releases/font_4.12.1.zip",
+					"type": "zip"
+				}
+			}
+        },
+        {
+        "type": "package",
+        "package": {
+          "name": "dinbror/blazy",
+          "version": "1.8.2",
+          "type": "drupal-library",
+          "extra": {
+            "installer-name": "blazy"
+          },
+          "source": {
+            "type": "git",
+            "url": "https://github.com/dinbror/blazy",
+            "reference": "1.8.2"
+        }
+        }
+      }
+    ],
+    "require": {
+        "php": ">=5.6",
+        "ckeditor-plugin/colorbutton": "^4.12",
+        "ckeditor-plugin/font": "^4.12",
+        "ckeditor-plugin/panelbutton": "^4.12",
+        "composer/installers": "^1.2",
+        "cweagans/composer-patches": "^1.6.5",
+        "dinbror/blazy": "^1.8",
+        "drupal-composer/drupal-scaffold": "^2.5",
+        "drupal/admin_toolbar": "^1.27",
+        "drupal/blazy": "^2.0",
+        "drupal/bootstrap_barrio": "^4.22",
+        "drupal/ckeditor_font": "^1.0",
+        "drupal/color_field": "^2.0",
+        "drupal/colorbutton": "^1.1",
+        "drupal/config_split": "^1.4",
+        "drupal/console": "^1.0.2",
+        "drupal/core": "^8.7.0",
+        "drupal/devel": "^2.1",
+        "drupal/entity_browser": "^2.2",
+        "drupal/entity_embed": "^1.0",
+        "drupal/inline_entity_form": "^1.0",
+        "drupal/metatag": "^1.9",
+        "drupal/paragraphs": "^1.8",
+        "drupal/pathauto": "^1.4",
+        "drupal/zurb_foundation": "^6.0",
+        "drush/drush": "^9.0.0",
+        "vlucas/phpdotenv": "^2.4",
+        "webflo/drupal-finder": "^1.0.0",
+        "webmozart/path-util": "^2.3",
+        "zaporylie/composer-drupal-optimizations": "^1.0"
+    },
+    "require-dev": {
+        "webflo/drupal-core-require-dev": "^8.7.0"
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true
+    },
+    "autoload": {
+        "classmap": [
+            "scripts/composer/ScriptHandler.php"
+        ],
+        "files": ["load.environment.php"]
+    },
+    "scripts": {
+        "pre-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "pre-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "post-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ],
+        "post-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ]
+    },
+    "extra": {
+        "composer-exit-on-patch-failure": true,
+        "patchLevel": {
+            "drupal/core": "-p2"
+        },
+        "installer-paths": {
+            "web/core": ["type:drupal-core"],
+            "web/libraries/{$name}": ["type:drupal-library"],
+            "web/modules/contrib/{$name}": ["type:drupal-module"],
+            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "web/themes/contrib/{$name}": ["type:drupal-theme"],
+            "drush/Commands/{$name}": ["type:drupal-drush"]
+        },
+        "drupal-scaffold": {
+            "initial": {
+                ".editorconfig": "../.editorconfig",
+                ".gitattributes": "../.gitattributes"
+            }
+        }
+    }
+}

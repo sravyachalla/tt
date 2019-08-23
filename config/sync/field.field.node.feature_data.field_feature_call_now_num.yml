@@ -1,0 +1,19 @@
+uuid: e171e86d-742c-4ddf-bf5f-a66b6a5ec4ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_feature_call_now_num
+    - node.type.feature_data
+id: node.feature_data.field_feature_call_now_num
+field_name: field_feature_call_now_num
+entity_type: node
+bundle: feature_data
+label: 'Call Now Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

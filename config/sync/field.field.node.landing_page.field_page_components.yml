@@ -1,0 +1,30 @@
+uuid: 0dbdc65f-2597-427c-bb24-a89c6fca7d71
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_page_components
+    - node.type.banner_images
+    - node.type.feature_data
+    - node.type.landing_page
+id: node.landing_page.field_page_components
+field_name: field_page_components
+entity_type: node
+bundle: landing_page
+label: 'Add Component'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      banner_images: banner_images
+      feature_data: feature_data
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: banner_images
+field_type: entity_reference

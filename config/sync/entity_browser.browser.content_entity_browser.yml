@@ -1,0 +1,52 @@
+uuid: eb9c7e40-6efb-4751-a76f-4c01b0967d7b
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.content_list
+  module:
+    - entity_browser_entity_form
+    - views
+name: content_entity_browser
+label: 'Content Entity Browser'
+display: modal
+display_configuration:
+  width: '650'
+  height: '500'
+  link_text: 'Select entities'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  f7305b58-aa5a-47cd-bd9e-7ea36b94bfdb:
+    settings:
+      view: content_list
+      view_display: entity_browser_1
+      submit_text: 'Select components'
+      auto_select: false
+    uuid: f7305b58-aa5a-47cd-bd9e-7ea36b94bfdb
+    weight: -10
+    label: 'Select components'
+    id: view
+  5b724eec-1ad4-4bae-84be-087e12dc26e2:
+    settings:
+      entity_type: node
+      bundle: banner_images
+      form_mode: default
+      submit_text: Save
+    uuid: 5b724eec-1ad4-4bae-84be-087e12dc26e2
+    weight: -9
+    label: 'Add Banner'
+    id: entity_form
+  ec514f1d-4a42-419e-aa38-36b09b041a7a:
+    settings:
+      entity_type: node
+      bundle: feature_data
+      form_mode: default
+      submit_text: Save
+    uuid: ec514f1d-4a42-419e-aa38-36b09b041a7a
+    weight: -8
+    label: 'Add Feature Data'
+    id: entity_form

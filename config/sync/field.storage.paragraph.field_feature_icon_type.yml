@@ -1,0 +1,33 @@
+uuid: ba4947c8-9f87-4b5f-9a81-239aabacbcd0
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_feature_icon_type
+field_name: field_feature_icon_type
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: strip-icon-happy
+      label: 'Happy Customers'
+    -
+      value: strip-icon-yrs
+      label: 'Travel Experience'
+    -
+      value: low-deposit-icon
+      label: 'Low Deposit'
+    -
+      value: trust-pilot
+      label: 'Trust Pilot'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

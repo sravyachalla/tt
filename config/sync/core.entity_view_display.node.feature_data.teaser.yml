@@ -1,0 +1,22 @@
+uuid: 27c11c4d-507e-4de4-bc03-4438751f405f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.feature_data.field_feature_data
+    - node.type.feature_data
+  module:
+    - user
+id: node.feature_data.teaser
+targetEntityType: node
+bundle: feature_data
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_feature_data: true

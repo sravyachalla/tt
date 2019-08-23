@@ -1,0 +1,19 @@
+uuid: 30df6633-5aee-4f03-b4e3-165fb1ba9470
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_feature_caption
+    - paragraphs.paragraphs_type.features
+id: paragraph.features.field_feature_caption
+field_name: field_feature_caption
+entity_type: paragraph
+bundle: features
+label: 'Feature Caption'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

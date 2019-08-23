@@ -1,0 +1,41 @@
+uuid: d3fff0de-dad2-419e-b422-58a8411c9cc8
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.image_browser
+    - field.field.paragraph.banner_images.field_banner_image
+    - field.field.paragraph.banner_images.field_banner_search_bar
+    - paragraphs.paragraphs_type.banner_images
+  module:
+    - entity_browser
+id: paragraph.banner_images.default
+targetEntityType: paragraph
+bundle: banner_images
+mode: default
+content:
+  field_banner_image:
+    weight: 0
+    settings:
+      entity_browser: image_browser
+      field_widget_display: rendered_entity
+      field_widget_display_settings:
+        view_mode: default
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_replace: false
+      open: false
+    third_party_settings: {  }
+    type: entity_browser_entity_reference
+    region: content
+  field_banner_search_bar:
+    weight: 1
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,9 @@
+uuid: baeeb4b3-aaa6-4d3a-aa7d-936c3a8e05c1
+langcode: en
+status: true
+dependencies: {  }
+id: banner_images
+label: 'Banner Images'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

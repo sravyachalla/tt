@@ -1,0 +1,50 @@
+uuid: e252d106-443c-4537-80c0-1baef2c1a5da
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.feature_data.field_feature_call_now_num
+    - field.field.node.feature_data.field_feature_data
+    - field.field.node.feature_data.field_feature_include_call_now
+    - node.type.feature_data
+  module:
+    - entity_reference_revisions
+    - user
+id: node.feature_data.default
+targetEntityType: node
+bundle: feature_data
+mode: default
+content:
+  field_feature_call_now_num:
+    weight: 104
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_feature_data:
+    type: entity_reference_revisions_entity_view
+    weight: 102
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_feature_include_call_now:
+    weight: 103
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

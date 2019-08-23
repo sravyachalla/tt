@@ -1,0 +1,21 @@
+uuid: 3d4fcbd4-5481-4106-8896-d9ef4e6586a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_feature_icon_type
+    - paragraphs.paragraphs_type.features
+  module:
+    - options
+id: paragraph.features.field_feature_icon_type
+field_name: field_feature_icon_type
+entity_type: paragraph
+bundle: features
+label: 'Feature Icon Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

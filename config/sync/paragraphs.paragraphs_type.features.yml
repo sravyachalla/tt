@@ -1,0 +1,9 @@
+uuid: 3d98ef42-9621-41ee-b50c-80bf5258e3b9
+langcode: en
+status: true
+dependencies: {  }
+id: features
+label: Features
+icon_uuid: null
+description: 'Add teletext features like "ATOL and TTA protected".'
+behavior_plugins: {  }
